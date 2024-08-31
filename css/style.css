@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+  background-image: url("../img/fondo7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: rgb(169, 161, 161); */
+}
+
+h1 {
+  width: 80%;
+  font-size: 2.2em;
+  text-align: center;
+  /* text-shadow: 0.5px 0 0 rgba(255, 0, 0, 0.75),
+    -0.25px -0.5px 0 rgba(0, 255, 0, 0.75), 0.25px 0.5px 0 rgba(0, 0, 255, 0.75); */
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 18rem;
+  min-height: 35rem;
+  margin-top: 5rem;
+  margin-bottom: 3.5rem;
+  background-color: brown;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25), 0px 0px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.cover {
+  width: 13.5rem;
+  height: 13.5rem;
+  margin-top: 3rem;
+  /* margin-top: -2.5rem; */
+  object-fit: cover;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.19), 0px 0px 6px rgba(0, 0, 0, 0.23);
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2em;
+}
+
+.artist {
+  font-size: 1em;
+}
+
+audio {
+  display: none;
+}
+
+.progress-container {
+  width: 85%;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 0.325rem;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: black;
+}
+
+.time-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.buttons-container i,
+#close-playlist-button i {
+  font-size: 1em;
+  user-select: none;
+}
+
+.main-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#previous-button,
+#next-button {
+  font-size: 2em;
+}
+
+#play-button,
+#pause-button {
+  font-size: 3.25em;
+}
+
+#pause-button {
+  display: none;
+}
+
+#loop-button,
+#reset-loop-button,
+#queue-playlist-button {
+  font-size: 1.5em;
+}
+
+#reset-loop-button {
+  display: none;
+}
+
+.playlist-container {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 65%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px -5px 20px -5px rgba(0, 0, 0, 0.19),
+    0px -5px 6px -5px rgba(0, 0, 0, 0.23);
+}
+
+.playlist-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 1rem 0;
+}
+
+.playlist-container-header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+#close-playlist-button {
+  font-size: 1.5em;
+}
+
+.playlist {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+  width: 100%;
+  list-style: none;
+}
+
+.playlist::-webkit-scrollbar {
+  width: 6px;
+  background-color: #ffffff;
+}
+
+.playlist::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+.current-position {
+  opacity: 1 !important;
+}
+
+.playlist-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.playlist-item:first-child {
+  padding-top: 0;
+}
+
+.playlist-item:last-child {
+  border-bottom: none;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.playlist-item-artist {
+  width: 100%;
+  font-size: 0.9em;
+}
+
+@font-face {
+  font-family: "Code Saver";
+  src: url("../fonts/Code-Saver-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Code Saver";
+  src: url("../fonts/Code-Saver-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+footer p {
+  font-size: 0.875em;
+  font-family: "Raleway";
+  color: #000000;
+}
+
+footer a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #000000;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer i {
+  margin-left: 0.2rem;
+}
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 14px;
+  }
+}

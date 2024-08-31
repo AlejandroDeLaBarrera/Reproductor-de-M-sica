@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/c8859f7b0c.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Jazztify</title>
+  </head>
+
+  <body>
+    <h1><i class="fa-brands fa-spotify"></i> Jazztify</h1>
+
+    <section>
+      <img src="img/cover1.jpg" alt="Portada" class="cover" />
+
+      <div class="main-section">
+        <h2>Zing!</h2>
+        <span class="artist">Vince Giordano and The Nighthawks</span>
+        <audio controls>
+          <source
+            src="audio/Zing! - Vince Giordano and The Nighthawks.mp3"
+            type="audio/mp3"
+          />
+        </audio>
+        <div class="progress-container">
+          <div class="progress-bar-container" id="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <div class="time-container">
+            <p class="current-time"></p>
+            <p class="total-time"></p>
+          </div>
+        </div>
+        <div class="buttons-container">
+          <button id="loop-button">
+            <i class="material-symbols-outlined"> repeat </i>
+          </button>
+          <button id="reset-loop-button">
+            <i class="material-symbols-outlined"> repeat_one </i>
+          </button>
+          <div class="main-buttons-container">
+            <button id="previous-button">
+              <i class="material-symbols-outlined"> skip_previous </i>
+            </button>
+            <button id="play-button">
+              <i class="material-symbols-outlined"> play_circle </i>
+            </button>
+            <button id="pause-button">
+              <i class="material-symbols-outlined"> pause_circle </i>
+            </button>
+            <button id="next-button">
+              <i class="material-symbols-outlined"> skip_next </i>
+            </button>
+          </div>
+          <button id="queue-playlist-button">
+            <i class="material-symbols-outlined"> queue_music </i>
+          </button>
+        </div>
+      </div>
+
+      <div class="playlist-container">
+        <div class="playlist-container-header">
+          <div class="playlist-container-header-title">
+            <i class="material-symbols-outlined"> queue_music </i>
+            <h3>Lista de canciones</h3>
+          </div>
+          <button id="close-playlist-button">
+            <i class="material-symbols-outlined"> close </i>
+          </button>
+        </div>
+        <ul class="playlist"></ul>
+      </div>
+    </section>
+  </body>
+</html>
